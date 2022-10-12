@@ -1,0 +1,14 @@
+{
+    "title": "",
+    "description": "",
+    "isbn": "",
+      "author": "",
+      "lang": "zh-cn",
+    "plugins": ["code",
+	"copy-code-button"
+	],
+    "pluginsConfig": {
+    },
+    "variables": {
+    }
+}

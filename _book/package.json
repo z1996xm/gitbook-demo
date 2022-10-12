@@ -1,0 +1,16 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gitbook-plugin-code": "^0.1.0",
+    "gitbook-plugin-code-pro": "^0.1.1",
+    "gitbook-plugin-copy-code-button": "0.0.2"
+  }
+}
