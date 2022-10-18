@@ -1,4 +1,4 @@
-# 一、Manta M4P pin definition
+# 一、Manta M4P Table
 
 <table>
    <tr>
@@ -135,4 +135,3 @@
    <td>SCK</td><td>PA5</td><td>30</td></tr>
    <tr>
 </table>
-

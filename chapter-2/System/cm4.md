@@ -1,8 +1,6 @@
-# 1、Klipper
+# 一、Steps to use Raspberry pi CM4
 
-## 1.1 Preparation
-
-### 1.1.1 Download system image
+## 1.1  Download system image
 
 Download the system image of the built-in WebUI you like. Currently, the mainstream includes Fluidd, Mainmail, etc.
 
@@ -28,7 +26,7 @@ Download and install the official burning software of Raspberry Pie  <a href="ht
 
  2.Select System.
 
-  	![image-photo3](https://raw.githubusercontent.com/z1996xm/gitbook-demo/master/photo/photo3.jpg) 
+![image-photo3](https://raw.githubusercontent.com/z1996xm/gitbook-demo/master/photo/photo3.jpg) 
 
 3. Select "User defined", and then select the image downloaded to the computer.
 

@@ -4,10 +4,12 @@
     "isbn": "",
       "author": "",
       "lang": "zh-cn",
-    "plugins": ["code",
-	"copy-code-button"
+    "plugins": ["code"
 	],
     "pluginsConfig": {
+		"code":{
+		"copyButtons":true
+		}
     },
     "variables": {
     }

@@ -1,4 +1,4 @@
-# 一、Manta M8P pin definition
+# 一、Manta M8P Table
 
 <table>
    <tr>
@@ -210,4 +210,3 @@
    <td>SCK</td><td>PA5</td><td>30</td></tr>
    <tr>
 </table>
-

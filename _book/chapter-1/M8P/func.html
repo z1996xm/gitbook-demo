@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Manta M8P function definition · GitBook</title>
+        <title>Manta M8P Compile Firmware · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -126,7 +126,7 @@
                 <a href="../skr3/pin.html">
             
                     
-                    SKR-3 pin definition
+                    SKR-3 Pin Table
             
                 </a>
             
@@ -139,7 +139,7 @@
                 <a href="../skr3/func.html">
             
                     
-                    SKR-3 function definition
+                    SKR-3 Compile Firmware
             
                 </a>
             
@@ -171,7 +171,7 @@
                 <a href="../octopus/pin.html">
             
                     
-                    Octopus pin definition
+                    Octopus Pin Table
             
                 </a>
             
@@ -184,7 +184,7 @@
                 <a href="../octopus/func.html">
             
                     
-                    Octopus function definition
+                    Octopus Compile Firmware
             
                 </a>
             
@@ -216,7 +216,7 @@
                 <a href="../skr3E3/pin.html">
             
                     
-                    SKR-mini-E3-V3.0 pin definition
+                    SKR-mini-E3-V3.0 Pin Table
             
                 </a>
             
@@ -229,7 +229,7 @@
                 <a href="../skr3E3/func.html">
             
                     
-                    SKR-mini-E3-V3.0 function definition
+                    SKR-mini-E3-V3.0 Compile Firmware
             
                 </a>
             
@@ -261,7 +261,7 @@
                 <a href="../M4P/pin.html">
             
                     
-                    Manta M4P pin definition
+                    Manta M4P Pin Table
             
                 </a>
             
@@ -274,7 +274,7 @@
                 <a href="../M4P/func.html">
             
                     
-                    Manta M4P function definition
+                    Manta M4P Compile Firmware
             
                 </a>
             
@@ -306,7 +306,7 @@
                 <a href="pin.html">
             
                     
-                    Manta M8P pin definition
+                    Manta M8P Pin Table
             
                 </a>
             
@@ -319,7 +319,7 @@
                 <a href="func.html">
             
                     
-                    Manta M8P function definition
+                    Manta M8P Compile Firmware
             
                 </a>
             
@@ -342,7 +342,7 @@
                 <a href="../../">
             
                     
-                    klipper
+                    System installation
             
                 </a>
             
@@ -351,12 +351,25 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../../chapter-2/Klipper/Klipper.html">
+        <li class="chapter " data-level="1.2.1" data-path="../../chapter-2/System/cm4.html">
             
-                <a href="../../chapter-2/Klipper/Klipper.html">
+                <a href="../../chapter-2/System/cm4.html">
             
                     
-                    Klipper
+                    Raspberry Pi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../chapter-2/System/cb1.html">
+            
+                <a href="../../chapter-2/System/cb1.html">
+            
+                    
+                    CB1
             
                 </a>
             
@@ -425,7 +438,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Manta M8P function definition</a>
+        <a href="../.." >Manta M8P Compile Firmware</a>
     </h1>
 </div>
 
@@ -440,7 +453,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x4E8C;&#x3001;manta-m8p-function-definition">&#x4E8C;&#x3001;Manta M8P function definition</h1>
+                                <h1 id="&#x4E8C;&#x3001;manta-m8p-firmware-compilation">&#x4E8C;&#x3001;Manta M8P Firmware Compilation</h1>
+<ol>
+<li><p>After ssh is connected to raspberry pie, enter at the command line&#xFF1A;</p>
+<pre><code>cd ~/klipper/
+</code></pre><pre><code>make menuconfig
+</code></pre><p>Use the following configuration to compile the firmware (if the following options are not available, please update the Klipper firmware source code to the latest version)</p>
+<p>&#x200B;    <strong><em> [\</em>] Enable extra low-level configuration options</strong> </p>
+<p>&#x200B;    <strong>* Micro-controller Architecture (STMicroelectronics STM32) ---&gt;</strong> </p>
+<p>&#x200B;    <strong>* Processor model (STM32G0B1) ---&gt;</strong> </p>
+<p>&#x200B;    <strong>* Bootloader offset (8KiB bootloader) ---&gt;</strong> </p>
+<p>&#x200B;    <strong>* Clock Reference (8 MHz crystal) ---&gt;</strong> </p>
+<p>&#x200B;    <strong>* Communication interface (USB (on PA11/PA12)) ---&gt;</strong> </p>
+<p><img src="https://raw.githubusercontent.com/z1996xm/gitbook-demo/master/photo/photo20.jpg" alt="image-photo20"></p>
+</li>
+</ol>
+<ol>
+<li>After the configuration is selected, enter &apos;q&apos; to exit the configuration interface. When asked whether to save the configuration, select &quot;Yes&quot;</li>
+</ol>
+<ol>
+<li><p>Enter <code>make</code> to compile the firmware. When the <code>make</code> is completed, it will be displayed in the raspberry pie <code>home/pi/kliipper/out</code> file.The folder generates the <code>klipper.bin</code>  firmware we need, which can be directly downloaded to the computer on the left side of the ssh software</p>
+<p><img src="https://raw.githubusercontent.com/z1996xm/gitbook-demo/master/photo/photo14.jpg" alt="image-photo14"></p>
+</li>
+</ol>
 
                                 
                                 </section>
@@ -468,12 +503,12 @@
 
             
                 
-                <a href="pin.html" class="navigation navigation-prev " aria-label="Previous page: Manta M8P pin definition">
+                <a href="pin.html" class="navigation navigation-prev " aria-label="Previous page: Manta M8P Pin Table">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../../" class="navigation navigation-next " aria-label="Next page: klipper">
+                <a href="../../" class="navigation navigation-next " aria-label="Next page: System installation">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -484,7 +519,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Manta M8P function definition","level":"1.1.5.2","depth":3,"next":{"title":"klipper","level":"1.2","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"Klipper","level":"1.2.1","depth":2,"path":"chapter-2/Klipper/Klipper.md","ref":"chapter-2/Klipper/Klipper.md","articles":[]}]},"previous":{"title":"Manta M8P pin definition","level":"1.1.5.1","depth":3,"path":"chapter-1/M8P/pin.md","ref":"chapter-1/M8P/pin.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","copy-code-button","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"","gitbook":"*","description":""},"file":{"path":"chapter-1/M8P/func.md","mtime":"2022-09-19T07:19:41.423Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-12T08:37:52.122Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Manta M8P Compile Firmware","level":"1.1.5.2","depth":3,"next":{"title":"System installation","level":"1.2","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"Raspberry Pi","level":"1.2.1","depth":2,"path":"chapter-2/System/cm4.md","ref":"chapter-2/System/cm4.md","articles":[]},{"title":"CB1","level":"1.2.2","depth":2,"path":"chapter-2/System/cb1.md","ref":"chapter-2/System/cb1.md","articles":[]}]},"previous":{"title":"Manta M8P Pin Table","level":"1.1.5.1","depth":3,"path":"chapter-1/M8P/pin.md","ref":"chapter-1/M8P/pin.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"code":{"copyButtons":true},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"","gitbook":"*","description":""},"file":{"path":"chapter-1/M8P/func.md","mtime":"2022-10-18T07:47:53.258Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-18T09:15:41.156Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -495,10 +530,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
         
     
         

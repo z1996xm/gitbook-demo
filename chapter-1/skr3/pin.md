@@ -1,4 +1,4 @@
-# 1. Pinout table
+# 1. Pinout Table
 
 
 <table>

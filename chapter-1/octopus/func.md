@@ -1,2 +1,2 @@
-# 二、Octopus function definition
+# 二、Octopus Firmware Compilation
 

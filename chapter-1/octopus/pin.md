@@ -1,4 +1,4 @@
-# 一、Octopus pin definition
+# 一、Octopus Table
 
 ### Ocotpus_Max_EZ Pinout table
 
